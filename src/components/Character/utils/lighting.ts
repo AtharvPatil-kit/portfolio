@@ -18,9 +18,9 @@ const setLighting = (scene: THREE.Scene) => {
   pointLight.castShadow = true;
   scene.add(pointLight);
 
-  new RGBELoader()
-    .setPath("models/")
-    .load("char_enviorment.hdr?v=2", function (texture) {
+new RGBELoader()
+  .setPath("/models/")
+  .load("char_enviorment.hdr?v=2", function (texture) {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       scene.environment = texture;
       scene.environmentIntensity = 0;
